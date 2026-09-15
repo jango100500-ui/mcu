@@ -1,0 +1,48 @@
+// MCU Watch Tracker — Film data
+// order = release order (1-38). saga = "infinity" | "multiverse"
+// branch = true for optional/side-branch nodes (kept off the direct main path)
+const MCU_FILMS = [
+  { id: 1,  title: "Iron Man",                                   year: 2008, runtime: 126, saga: "infinity",  branch: false },
+  { id: 2,  title: "The Incredible Hulk",                        year: 2008, runtime: 112, saga: "infinity",  branch: false },
+  { id: 3,  title: "Iron Man 2",                                 year: 2010, runtime: 124, saga: "infinity",  branch: false },
+  { id: 4,  title: "Thor",                                       year: 2011, runtime: 115, saga: "infinity",  branch: false },
+  { id: 5,  title: "Captain America: The First Avenger",         year: 2011, runtime: 124, saga: "infinity",  branch: false },
+  { id: 6,  title: "The Avengers",                                year: 2012, runtime: 143, saga: "infinity",  branch: false },
+  { id: 7,  title: "Iron Man 3",                                 year: 2013, runtime: 130, saga: "infinity",  branch: false },
+  { id: 8,  title: "Thor: The Dark World",                       year: 2013, runtime: 112, saga: "infinity",  branch: false },
+  { id: 9,  title: "Captain America: The Winter Soldier",        year: 2014, runtime: 136, saga: "infinity",  branch: false },
+  { id: 10, title: "Guardians of the Galaxy",                    year: 2014, runtime: 121, saga: "infinity",  branch: false },
+  { id: 11, title: "Avengers: Age of Ultron",                    year: 2015, runtime: 141, saga: "infinity",  branch: false },
+  { id: 12, title: "Ant-Man",                                    year: 2015, runtime: 117, saga: "infinity",  branch: false },
+  { id: 13, title: "Captain America: Civil War",                 year: 2016, runtime: 147, saga: "infinity",  branch: false },
+  { id: 14, title: "Doctor Strange",                             year: 2016, runtime: 115, saga: "infinity",  branch: false },
+  { id: 15, title: "Guardians of the Galaxy Vol. 2",              year: 2017, runtime: 136, saga: "infinity",  branch: false },
+  { id: 16, title: "Spider-Man: Homecoming",                     year: 2017, runtime: 133, saga: "infinity",  branch: false },
+  { id: 17, title: "Thor: Ragnarok",                              year: 2017, runtime: 130, saga: "infinity",  branch: false },
+  { id: 18, title: "Black Panther",                               year: 2018, runtime: 134, saga: "infinity",  branch: false },
+  { id: 19, title: "Avengers: Infinity War",                      year: 2018, runtime: 149, saga: "infinity",  branch: false },
+  { id: 20, title: "Ant-Man and the Wasp",                        year: 2018, runtime: 118, saga: "infinity",  branch: false },
+  { id: 21, title: "Captain Marvel",                              year: 2019, runtime: 123, saga: "infinity",  branch: false },
+  { id: 22, title: "Avengers: Endgame",                           year: 2019, runtime: 181, saga: "infinity",  branch: false },
+  { id: 23, title: "Spider-Man: Far From Home",                   year: 2019, runtime: 129, saga: "infinity",  branch: false },
+  { id: 24, title: "Black Widow",                                 year: 2021, runtime: 134, saga: "multiverse", branch: true  },
+  { id: 25, title: "Shang-Chi and the Legend of the Ten Rings",   year: 2021, runtime: 132, saga: "multiverse", branch: false },
+  { id: 26, title: "Eternals",                                    year: 2021, runtime: 156, saga: "multiverse", branch: false },
+  { id: 27, title: "Spider-Man: No Way Home",                     year: 2021, runtime: 148, saga: "multiverse", branch: false },
+  { id: 28, title: "Doctor Strange in the Multiverse of Madness",  year: 2022, runtime: 126, saga: "multiverse", branch: false },
+  { id: 29, title: "Thor: Love and Thunder",                      year: 2022, runtime: 119, saga: "multiverse", branch: false },
+  { id: 30, title: "Black Panther: Wakanda Forever",              year: 2022, runtime: 161, saga: "multiverse", branch: false },
+  { id: 31, title: "Ant-Man and the Wasp: Quantumania",           year: 2023, runtime: 125, saga: "multiverse", branch: false },
+  { id: 32, title: "Guardians of the Galaxy Vol. 3",              year: 2023, runtime: 150, saga: "multiverse", branch: false },
+  { id: 33, title: "The Marvels",                                 year: 2023, runtime: 105, saga: "multiverse", branch: false },
+  { id: 34, title: "Deadpool & Wolverine",                        year: 2024, runtime: 128, saga: "multiverse", branch: true  },
+  { id: 35, title: "Captain America: Brave New World",            year: 2025, runtime: 118, saga: "multiverse", branch: false },
+  { id: 36, title: "Thunderbolts*",                               year: 2025, runtime: 127, saga: "multiverse", branch: false },
+  { id: 37, title: "The Fantastic Four: First Steps",             year: 2025, runtime: 115, saga: "multiverse", branch: false },
+  { id: 38, title: "Avengers: Doomsday",                          year: 2026, runtime: null, saga: "multiverse", branch: false, upcoming: true },
+];
+
+const SAGAS = {
+  infinity:   { key: "sagaInfinity",   range: [1, 23] },
+  multiverse: { key: "sagaMultiverse", range: [24, 38] },
+};
